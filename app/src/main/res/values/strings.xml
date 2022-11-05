@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Easy Biller</string>
+
+    <string-array name="menu_item">
+
+        <item>Chicken</item>
+        <item>Burger</item>
+        <item>Pizza</item>
+        <item>Meat Ball</item>
+        <item>Fried rice</item>
+        <item>Ice-cream</item>
+        <item>Soup</item>
+        <item>Beef</item>
+        <item>Ramen</item>
+
+    </string-array>
+
+    <string-array name="item_price">
+        <item>100</item>
+        <item>180</item>
+        <item>400</item>
+        <item>120</item>
+        <item>50</item>
+        <item>100</item>
+        <item>60</item>
+        <item>180</item>
+        <item>70</item>
+    </string-array>
+    <string name="title_activity_set_price">SetPrice</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+</resources>

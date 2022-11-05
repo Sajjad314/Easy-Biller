@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SalesActivity"
+
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="@color/teal_200"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Total Price"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            >
+
+        </TextView>
+        <TextView
+            android:id="@+id/textViewTotalPrice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/scrollView"
+        android:background="#EEF1FF"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/textViewBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                ></TextView>
+
+            <TextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/listViewId"
+        android:layout_width="match_parent"
+        android:layout_height="446dp"
+        android:layout_weight="2"
+        android:background="#FDF6EC"
+        android:divider="@color/black"
+        android:dividerHeight="2dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reset"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/teal_700">
+
+        </androidx.appcompat.widget.AppCompatButton>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/teal_700">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+
+    <!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_margin="3dp"-->
+<!--        android:background="@color/teal_200"-->
+
+<!--        >-->
+<!--        <TextView-->
+
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="Product Id"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+<!--        <TextView-->
+<!--            android:layout_weight="1"-->
+<!--            android:id="@+id/showText"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="Amount"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_margin="3dp"-->
+
+<!--        >-->
+<!--        <TextView-->
+<!--            android:id="@+id/product1"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="chik11"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+<!--        <EditText-->
+
+<!--            android:id="@+id/product1amount"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/textinputborder"-->
+<!--            android:hint="Order Amount"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:inputType="numberDecimal" >-->
+
+<!--        </EditText>-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_margin="3dp"-->
+
+<!--        >-->
+<!--        <TextView-->
+<!--            android:id="@+id/product2"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="chik12"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+<!--        <EditText-->
+
+<!--            android:id="@+id/product2amount"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/textinputborder"-->
+<!--            android:hint="Order Amount"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:inputType="numberDecimal" >-->
+
+<!--        </EditText>-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_margin="3dp"-->
+
+<!--        >-->
+<!--        <TextView-->
+<!--            android:id="@+id/product3"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="chik13"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+<!--        <EditText-->
+
+<!--            android:id="@+id/product3amount"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/textinputborder"-->
+<!--            android:hint="Order Amount"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:inputType="numberDecimal" >-->
+
+<!--        </EditText>-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_margin="3dp"-->
+
+<!--        >-->
+<!--        <TextView-->
+<!--            android:id="@+id/product4"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="chik14"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+<!--        <EditText-->
+
+<!--            android:id="@+id/product4amount"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/textinputborder"-->
+<!--            android:hint="Order Amount"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:inputType="numberDecimal" >-->
+
+<!--        </EditText>-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_margin="3dp"-->
+
+<!--        >-->
+<!--        <TextView-->
+<!--            android:id="@+id/product5"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="chik15"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+<!--        <EditText-->
+
+<!--            android:id="@+id/product5amount"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/textinputborder"-->
+<!--            android:hint="Order Amount"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:inputType="numberDecimal" >-->
+
+<!--        </EditText>-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_margin="3dp"-->
+
+<!--        >-->
+<!--        <TextView-->
+<!--            android:id="@+id/product6"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="chik16"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+<!--        <EditText-->
+
+<!--            android:id="@+id/product6amount"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/textinputborder"-->
+<!--            android:hint="Order Amount"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:inputType="numberDecimal" >-->
+
+<!--        </EditText>-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_margin="3dp"-->
+
+<!--        >-->
+<!--        <TextView-->
+<!--            android:id="@+id/product7"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="chik17"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+<!--        <EditText-->
+
+<!--            android:id="@+id/product7amount"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/textinputborder"-->
+<!--            android:hint="Order Amount"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:inputType="numberDecimal" >-->
+
+<!--        </EditText>-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_margin="3dp"-->
+<!--        >-->
+<!--        <TextView-->
+<!--            android:id="@+id/product8"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="chik18"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+<!--        <EditText-->
+
+<!--            android:id="@+id/product8amount"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/textinputborder"-->
+<!--            android:hint="Order Amount"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:inputType="numberDecimal" >-->
+
+<!--        </EditText>-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="57dp"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_margin="3dp"-->
+<!--        >-->
+<!--        <TextView-->
+<!--            android:id="@+id/product9"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="Total"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/showTotal"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        >-->
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Calculate"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:id="@+id/buttonCalc"-->
+<!--            android:background="#1363DF">-->
+
+<!--        </androidx.appcompat.widget.AppCompatButton>-->
+
+<!--    </LinearLayout>-->
+
+
+
+
+
+
+</LinearLayout>
